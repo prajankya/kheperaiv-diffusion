@@ -1,5 +1,5 @@
-<!-- These files are based on https://github.com/ilpincy/argos3-examples (MIT LICENSE) -->
 <?xml version="1.0" ?>
+<!-- These files are based on https://github.com/ilpincy/argos3-examples (MIT LICENSE) -->
 <argos-configuration>
 
   <!-- ************************* -->
@@ -7,9 +7,7 @@
   <!-- ************************* -->
   <framework>
     <system threads="0" />
-    <experiment length="0"
-                ticks_per_second="10"
-                random_seed="124" />
+    <experiment length="0" ticks_per_second="10" random_seed="124" />
   </framework>
 
   <!-- *************** -->
@@ -17,12 +15,11 @@
   <!-- *************** -->
   <controllers>
 
-    <diffusion_controller id="khivdc"
-                                  library="build/libdiffusion.so">
+    <diffusion_controller id="khivdc" library="build/libdiffusion.so">
       <actuators>
         <differential_steering implementation="default" />
-        <leds                  implementation="default" medium="leds" />
-        <range_and_bearing     implementation="default" />
+        <leds implementation="default" medium="leds" />
+        <range_and_bearing implementation="default" />
       </actuators>
       <sensors>
         <kheperaiv_proximity implementation="default" show_rays="true" />
@@ -105,10 +102,7 @@
   <!-- * Visualization * -->
   <!-- ****************** -->
   <visualization>
-    <qt-opengl />
-
-    <!-- <webviz ff_draw_frames_every="10" /> -->
-    
+    <webviz ff_draw_frames_every="10" />
   </visualization>
 
 </argos-configuration>
